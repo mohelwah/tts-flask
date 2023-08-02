@@ -1,0 +1,12 @@
+{
+    "tts_path":"/media/erogol/data_ssd/Models/libri_tts/5049/", 
+    "tts_file":"best_model.pth",    
+    "tts_config":"config.json",     
+    "tts_speakers": null,           
+    "vocoder_config":null,
+    "vocoder_file": null,
+    "is_wavernn_batched":true,
+    "port": 5002,
+    "use_cuda": true,
+    "debug": true
+}

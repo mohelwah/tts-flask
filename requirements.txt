@@ -1,5 +1,4 @@
-lint
-black
-pytest
-pytest-cov
-click
+flask
+TTS
+mecab-python3
+unidic-lite
