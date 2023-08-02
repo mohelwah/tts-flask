@@ -15,8 +15,8 @@ from TTS.config import load_config
 from TTS.utils.manage import ModelManager
 from TTS.utils.synthesizer import Synthesizer
 
-config_path1 = "models/config.json"
-model_path1 = "models/checkpoint_2530000.pth"
+model_path = "https://huggingface.co/mohelwah/tts-finetuned/resolve/main/checkpoint_2530000.pth"
+config_path = "https://huggingface.co/mohelwah/tts-finetuned/resolve/main/config.json"
 
 
 def create_argparser():
@@ -41,11 +41,11 @@ def create_argparser():
     parser.add_argument("--vocoder_name", type=str, default=None, help="name of one of the released vocoder models.")
 
     # Args for running custom models
-    parser.add_argument("--config_path", default=None, type=str, help="Path to model config file.")
+    parser.add_argument("--config_path", default=config_path, type=str, help="Path to model config file.")
     parser.add_argument(
         "--model_path",
         type=str,
-        default=None,
+        default=model_path,
         help="Path to model file.",
     )
     parser.add_argument(
@@ -268,7 +268,8 @@ def mary_tts_api_process():
 
 
 def main():
-    
+    model_path = "https://huggingface.co/mohelwah/tts-finetuned/resolve/main/checkpoint_2530000.pth"
+    config_path = "https://huggingface.co/mohelwah/tts-finetuned/resolve/main/config.json"
     app.run(debug=args.debug, host="::", port=args.port)
 
 
