@@ -270,7 +270,7 @@ def mary_tts_api_process():
 def main():
     model_path = "https://huggingface.co/mohelwah/tts-finetuned/resolve/main/checkpoint_2530000.pth"
     config_path = "https://huggingface.co/mohelwah/tts-finetuned/resolve/main/config.json"
-    app.run(debug=args.debug, host="::", port=args.port)
+    app.run(debug=args.debug, host="::", port=8080 )
 
 
 if __name__ == "__main__":
