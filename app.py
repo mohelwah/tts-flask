@@ -72,8 +72,8 @@ if args.list_models:
     sys.exit()
 
 # update in-use models to the specified released models.
-model_path = None
-config_path = None
+model_path = "https://huggingface.co/mohelwah/tts-finetuned/resolve/main/checkpoint_2530000.pth"
+config_path = "https://huggingface.co/mohelwah/tts-finetuned/resolve/main/config.json"
 speakers_file_path = None
 vocoder_path = None
 vocoder_config_path = None
