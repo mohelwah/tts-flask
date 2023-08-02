@@ -23,6 +23,9 @@ this is scaffold template for python
     -# Setup Virtual Env
     - source ~/.MLOps/bin/activate
 
+    to run the flask 
+    >> python app.py --model_path https://huggingface.co/mohelwah/tts-finetuned/resolve/main/checkpoint_2530000.pth --config_path https://huggingface.co/mohelwah/tts-finetuned/resolve/main/config.json
+
 ## run jupyter notebook
   - jupyter noteboke: - install ipykernel
   - run command: - ipython kernel install --user --name=scrape

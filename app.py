@@ -15,6 +15,9 @@ from TTS.config import load_config
 from TTS.utils.manage import ModelManager
 from TTS.utils.synthesizer import Synthesizer
 
+config_path1 = "models/config.json"
+model_path1 = "models/checkpoint_2530000.pth"
+
 
 def create_argparser():
     def convert_boolean(x):
@@ -102,6 +105,20 @@ if args.vocoder_path is not None:
     vocoder_config_path = args.vocoder_config_path
 
 # load models
+# load models
+'''
+synthesizer = Synthesizer(
+    tts_checkpoint=model_path1,
+    tts_config_path=config_path1,
+    
+    tts_languages_file=None,
+   
+  
+    encoder_checkpoint="",
+    encoder_config="",
+    use_cuda=args.use_cuda,
+)
+'''
 synthesizer = Synthesizer(
     tts_checkpoint=model_path,
     tts_config_path=config_path,
@@ -251,6 +268,7 @@ def mary_tts_api_process():
 
 
 def main():
+    
     app.run(debug=args.debug, host="::", port=args.port)
 
 

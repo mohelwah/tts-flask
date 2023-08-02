@@ -42,12 +42,10 @@ from TTS.vocoder.models.hifigan_generator import HifiganGenerator
 from TTS.vocoder.utils.generic_utils import plot_results
 
 
-config_path1 = "https://huggingface.co/mohelwah/tts-finetuned/resolve/main/config.json"
-model_path1 = "https://huggingface.co/mohelwah/tts-finetuned/resolve/main/checkpoint_2530000.pth"
+config_path = "https://huggingface.co/mohelwah/tts-finetuned/resolve/main/config.json"
+model_path = "https://huggingface.co/mohelwah/tts-finetuned/resolve/main/checkpoint_2530000.pth"
 
 
-config_path = "models/config.json"
-model_path = "models/checkpoint_2530000.pth"
 
 
 
@@ -56,4 +54,11 @@ print("done 0")
 
 
 model = Vits.init_from_config(config,verbose=True)
+print("done 1")
 model.load_checkpoint( config, model_path, eval=True)
+print("done")
+
+
+
+
+
